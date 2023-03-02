@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stardust Crusaders</title>
+  <link rel="shortcut icon" href="StarMark.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Stardust Crusaders</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Opportunities</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Advantages</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Contacts</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Programming</h1>
+    <h3>as a way of life!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Our services will help your children!</h2>
+      <span>We have a large assortment for learning a programming language</span>
+    </div>
+    <div class="text">
+      <span>Practical homework - Regular homework will ensure maximum learning efficiency.
+        A personalized certificate at the end of the course - We will confirm your knowledge. 
+        The certificate will be a plus for admission to technical educational institutions.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Advantages</h2>
+    <h4>everything is easier with us</h4>
+
+    <div class="img">
+      <a href="index.html" target="_blank"><img src="https://ictslab.com/wp-content/uploads/2019/03/d1326ca6cca8038cd115a061b4e2b3bc-840x430.png" alt="" height="320"></a>
+      <span>Easy and intuitive Python language learning for beginners</span>
+    </div>
+    <div class="img">
+      <a href="https://www.java.com/ru/" target="_blank"><img src="https://www.glossary-internet.ru/upload/medialibrary/df1/df14db5f5137ae8edf70c9c871ac7b9d.png" alt="" height="320"></a>
+      <span>Java Lessons for Beginners</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Feedback</h5></center>
+    <form id="form_input">
+      <label for="name">Name <span>*</span></label><br>
+      <input type="text" placeholder="Enter a name" name="name" id="name"><br>
+      <label for="email">Your mail <span>*</span></label><br>
+			<input type="email" placeholder="Enter email" name="email" id="email"><br>
+			<label for="message">Message <span>*</span></label><br>
+			<textarea placeholder="Enter your message" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Send</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Price</span><br>
+      <span class="heading">How much do our courses cost?</span>
+      <p>Our courses are absolutely free, absolutely everyone can watch them.</p>
+      <span class="heading">Why is the course free?</span>
+      <p>Because our main task is to increase interest in programming among children and give them sufficient education in programming</p>
+      <span class="heading">Why did we make this decision?</span>
+      <p>We believe that doing something paid for children's content is not entirely appropriate, especially for educational purposes, it contradicts our ideas, and thus we may lose a lot of our potential students.</p>
+    </div>
+    <div>
+      <span class="title">Information</span><br>
+      <span class="heading">What is included in the services of our website?</span>
+      <p>Personal Account - you will have your own personal account, this allows you to save your completed training progress and continue at the place where you left off</p>
+      <span class="heading">What Are The Advantages our website?</span>
+      <p>Practical homework that will not be very difficult to solve for children - Regular homework will ensure maximum learning efficiency.</p>
+      <span class="heading">What will happen after finishing one of our courses?</span>
+      <p>At the end of the course, a personalized certificate will be waiting for you - We will confirm your knowledge. The certificate will certainly be a plus for admission to technical educational institutions.</p>
+    </div>
+    <div>
+      <span class="title">Target audience</span><br>
+      <span class="heading">Who will our programming school suit?</span>
+      <p>For children who spend days and nights at a computer, laptop or other similar gadgets.</p>
+      <span class="heading">What does our programming school teach?</span>
+      <p>Our school teaches computer literacy, the basics of programming and game creation. In this way, we will produce programmers in different fields.</p>
+      <span class="heading">Does the school have courses designed for advanced users?</span>
+      <p>Yes, we have courses for children who were already familiar with programming languages before, for such users we give more difficult tasks</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
